@@ -1,13 +1,13 @@
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDZPdAtqmvGSc0-CSr5CYH5cQcV7ez3qgg",
-  authDomain: "summit-7-zork.firebaseapp.com",
-  databaseURL: "https://summit-7-zork-default-rtdb.firebaseio.com",
-  projectId: "summit-7-zork",
-  storageBucket: "summit-7-zork.firebasestorage.app",
-  messagingSenderId: "631600869041",
-  appId: "1:631600869041:web:695fda880031d0a5c87c90",
-  measurementId: "G-VLDLBLWK1P"
+  apiKey: "AIzaSyB0yWFbkihn1kFgxFTOg6qs-7ZsO5oW1Yo",
+  authDomain: "summit7-zork3d.firebaseapp.com",
+  databaseURL: "https://summit7-zork3d-default-rtdb.firebaseio.com",
+  projectId: "summit7-zork3d",
+  storageBucket: "summit7-zork3d.firebasestorage.app",
+  messagingSenderId: "907718864656",
+  appId: "1:907718864656:web:b2e5ac06a9bb220d9f3f95",
+  measurementId: "G-RWF1NZFS1X"
 };
 
 // Initialize Firebase
