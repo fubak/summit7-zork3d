@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summit 7 Zork Clone - 3D Edition</title>
+  <link rel="shortcut icon" href="https://www.summit7.us/hubfs/logo_favicon-1.png">
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      padding: 20px;
+      margin: 0;
+    }
+    #title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: monospace;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+    #loginScreen, #gameScreen {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    #loginScreen {
+      display: block;
+    }
+    #gameScreen {
+      display: none;
+    }
+    #gameCanvas {
+      background-color: #000;
+      display: block;
+      margin: 0 auto;
+    }
+    #output {
+      white-space: pre-wrap;
+      padding: 10px;
+      height: 100px;
+      overflow-y: scroll;
+      border: 2px solid #0f0;
+      background-color: #111;
+    }
+    #commandInput {
+      width: 100%;
+      padding: 8px;
+      background-color: #000;
+      color: #0f0;
+      border: 1px solid #0f0;
+      outline: none;
+      margin-top: 10px;
+    }
+    #commandInput:focus {
+      border-color: #0ff;
+    }
+    #ui {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #0f0;
+    }
+    #inventory {
+      margin-bottom: 10px;
+    }
+    #menu {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: #111;
+      border: 1px solid #0f0;
+      padding: 10px;
+      display: none;
+    }
+    button {
+      background-color: #111;
+      color: #0f0;
+      border: 1px solid #0f0;
+      padding: 5px;
+      margin: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div id="title">
+SUMMIT 7 - CYBERSECURITY CRISIS - 3D EDITION
+  </div>
+  <div id="loginScreen">
+    <div id="auth">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button id="signUpButton">Sign Up</button>
+      <button id="logInButton">Log In</button>
+      <button id="googleLogInButton">Log In with Google</button>
+      <div id="authMessage">Welcome to Summit 7: Cybersecurity Crisis. Sign up or log in to start.</div>
+    </div>
+  </div>
+  <div id="gameScreen">
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <div id="output"></div>
+    <input type="text" id="commandInput" placeholder="Enter command...">
+    <div id="ui">
+      <div id="inventory">Inventory: </div>
+      <button id="menuButton">Menu</button>
+      <div id="menu">
+        <button id="newGame">New Game</button>
+        <button id="saveGame">Save</button>
+        <button id="loadGame">Load</button>
+        <button id="logout">Log Out</button>
+        <button id="exit">Exit</button>
+      </div>
+    </div>
+  </div>
+  <!-- Firebase SDKs (local) -->
+  <script src="firebase/firebase-app-compat.js"></script>
+  <script>console.log("Firebase App Compat Loaded:", typeof firebase !== 'undefined' ? "Yes" : "No");</script>
+  <script src="firebase/firebase-auth-compat.js"></script>
+  <script>console.log("Firebase Auth Compat Loaded:", typeof firebase !== 'undefined' ? "Yes" : "No");</script>
+  <script src="firebase/firebase-database-compat.js"></script>
+  <script>console.log("Firebase Database Compat Loaded:", typeof firebase !== 'undefined' ? "Yes" : "No");</script>
+  <script src="game.js"></script>
+</body>
+</html>
